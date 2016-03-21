@@ -11,10 +11,10 @@ if (!defined('BASE_DIR')){
 }
 
 $menu = new template('menu.menu');
-$menu_item= new template('menu.item');
+$m_item= new template('menu.item');
 
-$item->set('name','kontakt');
+$m_item->set('name','kontakt');
 $link = $http->getLink(array('act'=>'contact'));
-$item->set('link', $link);
-$menu->add('items',$item->parse());
+$m_item->set('link', $link);
+$menu->add('items',$m_item->parse());
 ?>
